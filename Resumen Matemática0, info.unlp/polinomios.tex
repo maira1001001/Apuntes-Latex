@@ -1,0 +1,107 @@
+\section{Polinomios}
+\subsection{Monomio}
+   \[M(x)=ax^n\] donde $a \in R, n \in N$, y $x$ es una indeterminada
+   \begin{itemize}
+    \item Si $a \neq 0, n$ es el grado del polinomio
+    \item Si $a=0$, el monomio no tiene grado
+   \end{itemize}
+\subsection{Polinomio}
+   Un Polinomio es la suma de varios monomios:
+   \[P(x)=a_n x^n + a_{n-1} x^{n-1}+ \ldots + a_1 x + a_0 \]
+   Donde $ a_n, a_{n-1}, \ldots, a_1, a_0 \in R$ son los coeficientes,
+   $x$ es la indeterminada, y 
+   $n, n-1, \ldots, 1, 0 \in N$ 
+  
+  \subsection{Grado de un Polin\'omio}
+      \subsubsection{Definici\'on}
+      \[P(x)=a_n x^n + a_{n-1} x^{n-1}+ \ldots + a_1 x + a_0 \]   
+      El grado de $P(x)$ es $n$, y se escribe $gr(P)=n$
+            
+      \subsubsection{Multiplicaci\'on de Polinomios}
+      Si hacemos $P(x) \cdot Q(x)$, el grado de la multiplicaci\'on es:
+      \[ gr(P(x). Q(x))=gr(P(x))+ gr(Q(x))\]   
+      
+   \subsection{Caracter\'isticas}
+      \[P(x)=a_n x^n + a_{n-1} x^{n-1}+ \ldots + a_1 x + a_0 \]   
+   \begin{itemize}
+    \item Coeficiente principal: $a_n$
+    \item T\'ermino independiente: $a_0$
+   \end{itemize}
+   
+    \subsection{Divisi\'on de Polin\'omios}
+    Dados dos polin\'omios $D(x)$ y $d(x)$, con $d(x) \neq 0$, existen y son \'unicos dos polin\'omios $C(x)$ y $r(x)$ tales que: 
+     \[ D(x)=d(x) \cdot C(x) + r(x) \]
+     con $gr[r(x)] < gr[d(x)]$ o $r(x) = 0$ \newline
+     $C(x)$: cociente; $r(x)$: resto.
+
+   \subsection{Ra\'ices de un Polinomio}
+   $x=a$ es ra\'iz de $P(x) \Leftrightarrow P(a)=0$ 
+   
+   \subsection{Teorema del Resto}   
+    
+    \[ P(x) = (x - a)  C(x) + r \]
+    Si $x = a$, lo reemplazamos en la igualdad anterior resulta: 
+    $P(a) = (a-a).C(a) + r$, entonces $r = P(a)$ \newline
+    
+   % Observaci\'on: Si queremos hacer $P(x) /  (x-a)$, en vez de hacer la divisi\'on (muy tediosa), podemos utilizar el Teorema del Resto. Basta con hallar el valor de $P(x)$ en $x=a$
+   
+   \subsection{Divisibilidad de Polinomios}
+   $P(x)$ es divisible por $Q(x)$, si el resto de la divisi\'on de $P(x)$ con $Q(x)$ es nulo.
+   \subsubsection{Factorización}
+\begin{itemize}
+ \item Factor Común \[EJ: \quad x^5-8x^3-x^2 = x^2(x^3-8x-1) \]
+ \item Diferencia de cuadrados \[ (a^2-b^2)=(a+b)(a-b)= a^2+ab-ab-b^2\]
+ \item Trinomio Cuadrado Perfecto \[ (a+b)^2=(a+b)(a+b)= a^2+ab+ab+b^2=a^2+2ab+b^2 \] \[  (a-b)^2=a^2+b^2-2ab \]no hemos inventado nada :D
+ 
+  \subsubsection{Raíces de un Polinomio con coeficientes enteros}
+  \subsubsection{Teorema de Gauss}
+  Cuando una fracción irreducible $\frac{p}{q}$ es raíz de un polinomio con coeficientes enteros, $p$ divide al término independiente, y $q$ divide al coeficiente principal\newline
+  Ej: $2x^3-3x^2-11x+6$. Divisores del término independiente$\quad a_0=6 \quad$: $p=1,-1,2,-2,3,-3,6,-6$. Divisores del coeficiente príncipal $a_3=2 \quad$: $q=1,-1,2,-2$. \newline
+  Posibles raíces del polinomio: $\frac{p}{q}$ (todas las combinaciones de $\frac{p}{q}$)
+  \end{itemize}
+  \subsection{Polinomio Lineal} 
+  \[ L(x)=ax+b, \quad con \quad a,b \in R \wedge a \neq 0\]
+  \subsubsection{Ecuación Lineal}
+  $L(x)=ax+b=0$
+  \subsubsection{Soluciones de la Ecuación Lineal}
+  \begin{itemize}
+  \item Determinada compatible: Solución única.
+  \item Determinada incompatible: $\infty$ soluciones
+  \item Indeterminada: $\nexists$ Solución
+  \end{itemize}
+  \subsection{Polinomio cuadrático}
+  \[ C(x)=ax^2+bx+c, \quad con \quad a,b,c \in R \wedge a \neq 0 \]
+  \subsubsection{Ecuación cuadrática}
+  \[ C(x)=ax^2+bx+c= 0\]
+  \subsubsection{Soluciones de la Ecuación Cuadrática}
+  La ecuación cuadrática puede expresarse de diferentes formas:
+  \begin{enumerate}
+  \item \[x^2=\alpha \]
+    \begin{tabular}{|c|c|c|}
+    $x^2=\alpha $ & soluciones  \\ \hline
+    $ \alpha > 0$ & $x=\pm \sqrt{\alpha}$ & $2$ soluciones $\neq$ \\
+    $ \alpha < 0$ & No tiene & $\nexists$ solución \\
+    $ \alpha=0  $ & $x=0$ & solución única \\
+    \end{tabular}
+    \item \[(x -k)^2=\alpha \]
+    \begin{tabular}{|c|c|c|}
+    $x^2=\alpha$ & soluciones \\ \hline
+    $ \alpha > 0$ & $x=k \pm \sqrt{\alpha}$ & $2$ soluciones $\neq$ \\
+    $ \alpha < 0$ & No tiene& $\nexists$ solución \\
+    $ \alpha=0$ & $x=k$ & solución única \\
+    \end{tabular}
+  \item \[ax^2+bx+c=0 \Rightarrow \alpha=b^2-4ac \]
+  \begin{tabular}{|c|c|c|}
+  $ax^2+bx+c=0$ &soluciones & \\ \hline
+  $ \alpha > 0 $ & $\frac{-b \pm \sqrt{\alpha}}{2a}$ & $2$ soluciones $\neq$ \\
+  $ \alpha < 0 $ &no tiene& $\nexists$ solución \\
+  $ \alpha =0 $ & $x= \frac{-b }{2a}$ & solución única
+  
+  \end{tabular} 
+  
+  \end{enumerate}
+
+
+
+
+    

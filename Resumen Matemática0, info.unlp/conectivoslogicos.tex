@@ -1,0 +1,238 @@
+\definecolor{naranja-fuente}{rgb}{245,209,146}
+
+
+\definecolor{naranja-fuente}{rgb}{245,209,146}
+
+
+\section{Conectivos Lógicos}
+  \subsection{Negaci\'on}
+  \begin{tabular}{cc}
+    $p$ & $\neg p$ \\ \hline
+    $V$ & $F$ \\
+    $F$ &$V$ \\
+  \end{tabular}
+\subsection{Conjunci\'on}
+  \begin{tabular}{ccc}
+    $p$  & $q$ & $p \wedge q$ \\ \hline
+    $V$ & $V$ & $V$ \\
+    $V$ & $F$ &$F$ \\
+    $F$ & $V$ & $F$ \\
+    $F$ & $F$ & $F$\\
+  \end{tabular}
+\subsection{Disjunci\'on}
+  \begin{tabular}{ccc}
+    $p$  & $q$ & $p \vee q$ \\ \hline
+    $V$ & $V$ & $V$ \\
+    $V$ & $F$ &$V$ \\
+    $F$ & $V$ & $V$ \\
+    $F$ & $F$ & $F$\\
+  \end{tabular}
+
+\subsection{Condicional o implicaci\'on}
+  \begin{tabular}{ccc}
+    $p$  & $q$ & $p \rightarrow q$ \\ \hline
+    $V$ & $V$ & $V$ \\
+    $V$ & $F$ &$F$ \\
+    $F$ & $V$ & $V$ \\
+    $F$ & $F$ & $V$\\
+  \end{tabular} \\
+%\newline
+$p \rightarrow q$ se lee:
+  \begin{itemize}
+   \item $p$ implica $q$
+    \item si $p$, entonces $q$
+     \item $p$ s\'olo si $q$
+      \item $q$ si $p$
+      \item $p$ es condici\'on suficiente para $q$
+      \item $q$ es condici\'on necesaria para $p$
+  \end{itemize}
+%\subsection{Rec\'iproco del implicador}
+%  \begin{tabular}{cccc}
+%    $p$  & $q$ & $p \rightarrow q$ & $p \leftarrow q$\\ \hline
+%    $V$ & $V$ & $V$ & $V$\\
+%    $V$ & $F$ &$F$  & $V$\\
+%    $F$ & $V$ & $V$ & $F$\\
+%    $F$ & $F$ & $V$ & $V$\\
+%  \end{tabular} \\
+%\subsection{Contrarrec\'iproco del implicador}
+%  \begin{tabular}{cccccc}
+%    $p$  & $q$ & $p \rightarrow q$ & $\neg q$ & $\neg p$ &$ \neg q \rightarrow \neg p$\\ \hline
+%    $V$  & $V$ & $V$ 		   &  $F$     &	$F$	 &  $V$ \\
+%    $V$  & $F$ & $F$ 		   &  $V$     &	$F$	 &  $F$\\
+%    $F$  & $V$ & $V$ 		   &  $F$     &	$V$	 &  $V$ \\	
+%    $F$  & $F$ & $V$ 		   &  $V$     &	$V$	 &  $V$ \\
+%  \end{tabular} \\
+\subsection{Rec\'iproco de la implicaci\'on}
+    El rec\'iproco de $p \rightarrow q$  es $q \rightarrow p$\\ 
+    Tienen valores diferentes\\
+ 
+\subsection{Contrarrec\'iproco de la implicaci\'on }
+     El contrarrec\'iproco de $p \rightarrow q$  es $\neg q \rightarrow \neg p$\\ 
+     Tienen los mismos valores \\
+
+  \subsection{Bicondicional}
+
+  \begin{tabular}{ccc}
+    $p$  & $q$ & $p \leftrightarrow q$ \\ \hline
+    $V$ & $V$ & $V$ \\
+    $V$ & $F$ &$F$ \\
+    $F$ & $V$ & $F$ \\
+    $F$ & $F$ & $V$\\
+  \end{tabular} \\
+
+  $p \leftrightarrow q$ se lee:
+  \begin{itemize}
+   \item $p$ si s\'olo si $q$
+    \item $p$ es necesario y suficiente para $q$
+  \end{itemize}
+
+  \subsection{Tautolog\'ia}
+    \subsubsection{Doble negaci\'on}
+      $\neg \neg p \Leftrightarrow p$ \\
+    
+    \subsubsection{Leyes conmutativas}
+      \renewcommand{\labelenumi}{\alph{enumi})}
+	\begin{enumerate}
+      \item $(p \wedge q) \Leftrightarrow (q \wedge p)$\\
+
+      \item $(p \vee q) \Leftrightarrow (q \vee p)$\\
+	\end{enumerate}
+	
+
+    \subsubsection{Leyes asociativas}
+     \renewcommand{\labelenumi}{\alph{enumi})}
+      \begin{enumerate}
+      \item $[(p \wedge q) \wedge r)] \Leftrightarrow [p \wedge (q \wedge r)]$
+
+      \item $[(p \vee q) \vee r)] \Leftrightarrow [p \vee (q \vee r)]$
+      \end{enumerate}
+      
+      
+    \subsubsection{Leyes distributivas}
+
+      \renewcommand{\labelenumi}{\alph{enumi})}
+	\begin{enumerate}
+
+      \item $[p \vee (q \wedge r)] \Leftrightarrow [(p \vee q) \wedge (p \vee r)]$
+
+      \item $[p \wedge (q \vee r)] \Leftrightarrow [(p \wedge q) \vee (p \wedge r)]$
+      \end{enumerate}
+      
+
+    \subsubsection{Leyes de idempotencia}
+      \renewcommand{\labelenumi}{\alph{enumi})}
+      \begin{enumerate}
+	\item $(p \vee p) \Leftrightarrow p$
+
+	\item $(p \wedge p) \Leftrightarrow p$
+      \end{enumerate}
+      
+
+
+    \subsubsection{Leyes  de De Morgan}
+      \renewcommand{\labelenumi}{\alph{enumi})}
+	\begin{enumerate}
+
+      \item $\neg (p \vee q) \Leftrightarrow (\neg p \wedge \neg q)$
+
+      \item $\neg (p \wedge q) \Leftrightarrow (\neg p \vee \neg q)$
+
+	\end{enumerate}
+	
+    \subsubsection{Implicaci\'on}
+      \renewcommand{\labelenumi}{\alph{enumi})}
+	\begin{enumerate}
+
+	  \item $(p \rightarrow q) \Leftrightarrow (\neg p \vee q)$
+	  
+	  \item $[(p \rightarrow r) \wedge (q \rightarrow r )] \Leftrightarrow [(p \wedge q) \rightarrow r )]$
+
+	  \item $[(p \rightarrow q) \wedge (p \rightarrow r )] \Leftrightarrow [(p \rightarrow  (q \wedge r) )]$
+	\end{enumerate}
+	
+
+    \subsubsection{Equivalencia}
+
+    $(p \leftrightarrow q)\Leftrightarrow[(p \rightarrow q) \wedge (q \rightarrow p)]$
+
+    \subsubsection{Adici\'on}
+
+    $p \Rightarrow (p \vee q)$
+
+    \subsubsection{Simplificaci\'on}
+
+    $(p \wedge q) \Rightarrow p$
+
+    \subsubsection{Absurdo}
+
+    $(p \rightarrow F)\Rightarrow \neg p$
+
+    \subsubsection{Modus ponens}
+
+    $[p \wedge (p \rightarrow q)] \Rightarrow q$
+
+    \subsubsection{Modus tollens}
+
+    $[(p \rightarrow q) \wedge \neg q] \Rightarrow \neg p$
+  
+    \subsubsection{Transitividad del $\leftrightarrow $}
+
+    $[(p \leftrightarrow q) \wedge (q \leftrightarrow r)] \Rightarrow (p \leftrightarrow r)$
+
+    \subsubsection{Transitividad del $\rightarrow $}
+
+    $[(p \rightarrow q) \wedge (q \rightarrow r)] \Rightarrow (p \rightarrow r)$
+
+    \subsubsection{Dilemas constructivos}
+      \renewcommand{\labelenumi}{\alph{enumi})}
+	\begin{enumerate}
+	  \item $[(p \rightarrow q) \vee (r \rightarrow s)] \Rightarrow [(p \vee r) \rightarrow (q \vee s)]$
+
+	  \item $[(p \rightarrow q) \wedge (r \rightarrow s)] \Rightarrow [(p \wedge r) \rightarrow (q \wedge s)]$
+	\end{enumerate}
+
+  \subsection{Contradicci\'on}
+	\begin{tabular}{ccc}
+	$p$ & $\neg p$ & $p \wedge \neg p$ \\ \hline
+	$F$ & $V$ & $F$ \\
+	$V$ & $F$ &$F$ \\
+      \end{tabular} \\
+      Ej: ``La computadoras es negra y la computadora no es negra''
+\subsection{Equivalencia l\'ogica}
+Cuando los resultados de dos proposiciones tienen los mismos valores de verdad, se indica como $p \Leftrightarrow q$
+
+\section{Operadores Universal y Existencial}
+
+  \subsection{Universal}
+    $\forall x : p(x) $ \\
+    Puede leerse :
+    \begin{itemize}
+     \item Para todo $x, p(x)$
+      \item Para cada $x$
+       \item Para cualquier $x$
+        \item Para $x$ arbitrario
+    \end{itemize}
+
+    
+  \subsection{Existencial}
+    $\exists x: p(x)$  \\
+    Puede leerse :
+    \begin{itemize}
+    \item Existe un $x$ tal que  $p(x)$
+      \item Para alg\'un $x$, $p(x)$
+      \item Existe, al menos, un $x$ tal que $p(x)$
+    \end{itemize}
+
+  \subsection{Equivalencias}
+  Sea $A$ el universo,
+    \begin{itemize}
+    \item $\neg \forall x \in A \thickspace p(x) \qquad \Leftrightarrow \qquad \exists x \in A: \thickspace \neg p(x) $ 
+     \item $\neg \exists x \in A: \thickspace p(x) \qquad \Leftrightarrow \qquad \forall x \in A \thickspace \neg p(x)$
+    \end{itemize}
+    
+    
+
+  \subsection{Alcance de un operador}
+El alcance se indica con par\'entesis\\
+$(\exists x): \thickspace x \medspace es \medspace verde \thickspace  \wedge \thickspace x \medspace es \medspace rojo$ \\
+$(\exists x): (\thickspace x \medspace es \medspace verde \thickspace \wedge \thickspace x \medspace es \medspace		 rojo)$ 
