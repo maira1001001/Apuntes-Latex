@@ -1,0 +1,22 @@
+%configura los href/links
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+

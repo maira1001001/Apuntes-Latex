@@ -1,0 +1,57 @@
+\section{Conjuntos}
+    
+        \subsection{Ejercicio Examen}
+            \begin{enumerate}
+                \item  Demuestre la igualdad justificando cada paso
+                $$(A - B) - C = A - (B \cup C)$$        
+            \end{enumerate}
+            
+    
+        \subsection{Propiedades de conjuntos}
+    
+            \begin{enumerate}
+                \item \textbf{Inclusión}
+                    $$ A \subset B \textrm{ es equivalente a } \forall x:  x \in A \to x \in B$$
+                \item \textbf{Unión}
+                    $$ A \cup B = \{ x: x \in A \vee  x \in B \} $$
+                \item \textbf{Intersección}
+                    $$ A \cap B = \{ x: x \in A \wedge  x \in B \}  $$
+                \item \textbf{Diferencia}
+                    $$ A - B = \{ x: x \in A \wedge  x \notin B \} $$
+                \item \textbf{Complemento}
+                    $$ C_{u} A = \{ x: x \in U \wedge  x \notin A \} $$
+                \item \textbf{Igualdad entre conjuntos}
+                    $$ A = B  \leftrightarrow \forall x, (x \in A \to x \in B) \wedge (x \in B \to x \in A) $$
+            \end{enumerate}
+            
+        
+        Pasamos a demostrar el ejerccicio 2 utilizando las propiedades enumeradas:
+        
+        \subsection{Respuesta}
+        
+        Por (6),igualdad entre conjuntos, debemos demostrar que se cumple $$ (A - B) - C \subset A - (B \cup C) $$ y que se cumple $$A - (B \cup C) \subset (A - B) - C ) $$
+            
+        Pasamos a demostrar $ (A - B) - C \subset A - (B \cup C) $
+        
+        \begin{enumerate}
+            \item $\to x \in (A - B) - C  $ 
+            \item $\to x \in (A - B) \wedge x \notin C $ propiedad (4)
+            \item $\to (x \in A  \wedge x \notin B) \wedge x \notin C $ propiedad (4)
+            \item $\to x \in A  \wedge (x \notin B \wedge x \notin C) $ por  asociación
+            \item $\to x \in A  \wedge \neg (x \in B \vee x \in C) $ por  De Morgan
+            \item $\to x \in A  \wedge x \notin (B \cup C) $ propiedad (2)
+            \item $\to x \in (A - (B \cup C)) $ propiedad (4)
+        \end{enumerate}
+        
+        Pasamos a demostrar $  A - (B \cup C) \subset (A - B) - C $
+        \begin{enumerate}
+            \item $\to x \in A  - (B \cup C) $ 
+            \item $\to x \in A  \wedge x \notin (B \cup C) $ propiedad (4)
+            \item $\to \neg (x \notin A  \vee x \in (B \cup C)) $ por De Morgan
+            \item $\to \neg (x \notin A  \vee x \in B \vee x \in C) $ propiedad (2)
+            \item $\to x \in A  \wedge x \notin B \wedge x \notin C $ por De Morgan
+            \item $\to x \in (A-B) \wedge x \notin C  $ propiedad (4)
+            \item $\to x \in (A-B)-C $ propiedad (4)
+        \end{enumerate}
+        
+        Vemos que se cumple $ (A - B) - C \subset A - (B \cup C) $ y $  A - (B \cup C) \subset (A - B) - C $. Por lo tanto,  es cierto  $(A - B) - C = A - (B \cup C)$

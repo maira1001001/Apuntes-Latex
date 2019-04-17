@@ -1,0 +1,48 @@
+\section{Lógica}
+
+    \subsection{Ejercicio examen}
+
+        1.Simbolizar la siguiente oración: "Hoy no llueve entonces podré salir a pescar o cortar el césped". \\
+        2. Escriba el contrareciproco en lenguaje simbólico.
+            
+    \subsection{Respuesta}
+    
+        Definimos las proposiciones atómicas:
+        
+        \begin{itemize}
+            \item p: "Hoy llueve"
+            \item q: "Podré salir a pescar"
+            \item r: "Podré cortar el césped"
+        \end{itemize}
+        Son proposiciones porque cada una tiene un sentido y un valor de verdad
+        \newline
+        Los símbolos que vamos a utilizar son: $\sim, \to, \wedge, \vee$
+        
+        
+        \begin{enumerate}
+            \item $\sim p \to (q \vee r )$ Expresamos la oración \newline
+            \item $\sim (q \vee r ) \to \sim (\sim p)$  Aplicamos contrarecíproco \newline
+            \item $\sim (q \vee r ) \to p $  Aplicamos doble negación en el consecuente \newline
+            \item $(\sim q \wedge \sim r) \to p  $  Aplicamos De Morgan en el antecedente  \newline
+
+        \end{enumerate}
+    
+    \subsection{Introducción a Lógica}
+    
+    El gran desafío de este ejecicio es comprender la frase "Hoy no llueve entonces podré salir a pescar o cortar el césped" y poder expresarla con símbolos lógicos. Ahora bien, recordemos que para lógica tenemos los siguientes elementos:
+    
+    \begin{enumerate}
+        \item proposiciones atómicas: p,q,r,s ...
+        \item conectores: $\sim$, $\wedge$, $\vee$, $\to$, $\leftrightarrow$
+    \end{enumerate}
+    
+    ¿Qué significa cada uno de los conectores?
+    \begin{enumerate}
+        \item  $\sim$: "no". Es la negación. Ejemplo: "Para derrotar al dragón  \textbf{no} tengo que olvidarme las posiones"
+        \item  $\wedge$: "y". Ejemplo: "Queremos el respeto \textbf{y} la igualdad", "Cada ser humano es una unidad \textbf{pero} nadie es más que nadie"
+        \item  $\vee$: "o". Ejemplo: "Nuestra patria dejará de ser colonia \textbf{o} nuestra bandera flameará sobre sus ruinas"
+        \item  $\to$: "si...entonces". Ejemplo: "Si llueve, entonces me quedo en mi casa", o "No haremos el futuro grande que estamos buscando \textbf{si} no conocemos el pasado grande que tuvimos"
+        \item  $\leftrightarrow: $ "Podré estudiar en La UNLP si y sólo sí encuentro un alquiler barato en la ciudad de La Plata"
+    \end{enumerate}
+    
+    

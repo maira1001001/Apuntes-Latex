@@ -1,0 +1,25 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[a4paper,11pt]{book}
+\documentclass{article}
+\include{paquetes/paquetes}
+\include{configuraciones/configuraciones}
+\include{configuraciones/encabezado}
+\include{autor/portada}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\input{autor/prologo}
+\input{secciones/logica}
+\input{secciones/conjuntos}
+\input{secciones/polinomios}
+\input{secciones/sistema-de-ecuaciones}
+
+\end{document}
