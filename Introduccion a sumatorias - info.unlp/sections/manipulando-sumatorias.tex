@@ -1,0 +1,226 @@
+\section{Manipulando sumatorias}
+
+De nuevo: la manera más fácil de manipular sumatorias es recordar que solamente estamos sumando números. Por ejemplo, es posible escribir $1+2+3+4$ de muchas formas diferentes:
+
+\begin{gather*}
+\sum_{i=1}^4{i}=\sum_{i=1}^3{i} + 4 =\sum_{i=1}^2{i} + 3 + 4 = \sum_{i=1}^2{i} + \sum_{i=3}^4{i} = \\
+\sum_{i=1}^1{i} + 2 + \sum_{i=3}^4{i} = 1 + 2 + \sum_{i=3}^4{i} = 1 + 2 + \sum_{i=3}^3{i} + 4 = 1 + 2 + 3 + 4 = 10
+\end{gather*}
+
+A continuación veremos algunas de las técnicas más usuales para manipular sumatorias; el objetivo es, siempre, simplificar la sumatoria, llevarla a una expresión que sea fácil de resolver, que ya conozcamos.
+
+
+% \subsection{Agregar o quitar términos de una sumatoria}
+% (Rellenar)
+
+
+
+\newcommand{\constante}{\sum_{i=1}^{n}{c a_i} =  c \times \sum_{i=1}^{n}{a_i}}
+\subsection{Sacar una constante fuera de una sumatoria ($\constante$)}
+
+Lejos, la operación más común al manipular sumatorias es sacar una constante afuera de la misma. Consideremos:
+
+\begin{equation*}
+\sum_{i=1}^4{2i}
+\end{equation*}
+
+Es fácil resolver esta sumatoria directamente: $ 2 + 4 + 6 + 8 = 20 $. Pero si el límite superior no fuese $4$, si fuera $4000$ o $n$, sería más complicado. Así que, intentemos de otra manera.
+
+\begin{equation*}
+\sum_{i=1}^4{2i} = 2 \times 1 +2 \times 2+2 \times 3+2 \times 4
+\end{equation*}
+
+Podemos sacar factor común con el 2 que está multiplicando a todos los términos, entonces tenemos:
+
+\begin{equation*}
+\sum_{i=1}^4{2i} = 2 \times 1 +2 \times 2+2 \times 3+2 \times 4 = 2 \times (1 + 2 + 3 + 4)
+\end{equation*}
+
+Pero $ 1 + 2 + 3 + 4 $  es una sumatoria que ya conocemos (y a esta altura ya nos aburre bastante): $\sum_{i=1}^4{i}$. Utilizando esto:
+
+\begin{equation*}
+\sum_{i=1}^4{2i} = 2 \times 1 +2 \times 2+2 \times 3+2 \times 4 = 2 \times (1 + 2 + 3 + 4) = 2 \times \sum_{i=1}^4{i}
+\end{equation*}
+
+O sea:
+
+\begin{equation*}
+\sum_{i=1}^4{2i} = 2 \times \sum_{i=1}^4{i}
+\end{equation*}
+
+En este caso, la constante que sacamos afuera fue el $2$, pero esto funciona para cualquier constante, o sea:
+
+\begin{equation*}
+\sum_{i=1}^4{c i} = c \times 1 +c \times 2+c \times 3+c \times 4 = c \times (1 + 2 + 3 + 4) = c \times \sum_{i=1}^4{i}
+\end{equation*}
+
+Y, de hecho, en este caso el término es $c i$, pero podemos hablar de un término más genérico, como $c a_i$, y tendríamos:
+
+\begin{equation*}
+\sum_{i=1}^4{c a_i} = c \times a_1 +c \times a_2+c \times a_3+c \times a_4 = c \times (a_1 + a_2 + a_3 + a_4) = c \times \sum_{i=1}^4{a_i}
+\end{equation*}
+
+Por último, esta idea claramente funciona con límites arbitrarios, dado que si bien tenemos más términos, seguimos simplemente sumando:
+
+\begin{equation*}
+\sum_{i=1}^n{c a_i} = c \times a_1 +c \times a_2+\dots+c \times a_n= c \times (a_1 + a_2 + \dots + a_4) = c \times \sum_{i=1}^n{a_i}
+\end{equation*}
+
+En estos dos últimos pasos, generalizamos nuestro ejemplo ($\sum_{i=1}^4{2i} = 2 \times \sum_{i=1}^4{i}$) utilizando términos y límites arbitrarios; haremos lo mismo cuando veamos el resto de las técnicas.
+
+Muchas veces vamos a necesitar aplicar esta técnica aunque el término de la sumatoria no este escrito exactamente como $c \times a_i$. Por ejemplo,  
+
+\begin{equation*}
+\sum_{i=1}^4{2^{i+3}} = 2^4+ 2^5+ 2^6 + 2^7
+\end{equation*}
+
+tiene como término $2^{i+3}$; sería más fácil si dicho término fuera $2^{i}$. Podemos lograr esto viendo que:
+
+\begin{equation*}
+2^{i+3}= 2^i \times 2^3 
+\end{equation*}
+
+Por ende:
+
+\begin{equation*}
+\sum_{i=1}^4{2^{i+3}} = \sum_{i=1}^4{(2^3 \times 2^i)} = 2^3 \times \sum_{i=1}^4{2^i}
+\end{equation*}
+
+\newcommand{\sumaConstantes}{\sum_{i=1}^{n}{c} = c + c + \dots + c \text{ (n veces) }  = c \times n \text{ (c constante) }}
+\subsection{Sumatorias de constantes ($\sumaConstantes$)}
+
+Un caso especial muy importante de la técnica anterior se da cuando tenemos la sumatoria de un término constante, como:
+
+\begin{equation*}
+\sum_{i=1}^{4}{2}= 2+2+2+2
+\end{equation*} 
+
+Podemos encarar la simplificación desde 2 perspectivas similares. Por un lado, $ 2 + 2 + 2 + 2 = 2 \times 4 = 8 $. Generalizando el término a una constante $c$:
+
+\begin{equation*}
+	\sum_{i=1}^{4}{} = c + c + c + c \text{ (4 veces) }= c \times 4
+\end{equation*}
+
+Generalizando el límite:
+
+\begin{equation*}
+	\sum_{i=1}^{n}{c} = c + c + \dots + c \text{ (n veces) }
+\end{equation*}
+
+La otra forma de verlo, quizás un poco más difícil de entender pero también un poco más elegante, es que aplicando la propiedad anterior:
+
+\begin{equation*}
+	\sum_{i=1}^{n}{c} = \sum_{i=1}^{n}{(c \times 1)} = c \sum_{i=1}^{n}{1}
+\end{equation*}
+
+Está claro que $\sum_{i=1}^{n}{1} =n$, ya que simplemente sumamos $n$ veces $1$. Entonces, de esta manera también llegamos a que:
+
+\begin{equation*}
+	\sum_{i=1}^{n}{c} = c \sum_{i=1}^{n}{1} = c \times n
+\end{equation*}
+
+Algo muy importante a notar es que los límites de la sumatoria son los que definen por cuanto multiplicamos a $c$. Por ejemplo,
+
+\begin{gather*}
+	\sum_{i=1}^{3}{c} =  c + c + c = c \times 3 \\
+	\sum_{i=2}^{4}{c} =  c + c + c = c \times 3 \\
+	\sum_{i=2}^{5}{c} =  c + c + c + c = c \times 4 \\
+	\sum_{i=0}^{4}{c} =  c + c + c + c + c= c \times 5 \\
+	\sum_{i=1}^{n-1}{c} =  c + c + \dots + c = c \times (n-1) \\
+	\sum_{i=2}^{n}{c} =  c + c + \dots + c = c \times (n-1) \\
+	\sum_{i=0}^{n}{c} =  c + c + \dots + c = c \times (n+1) \\
+	\sum_{i=0}^{n-1}{c} =  c + c + \dots + c = c \times n \\
+\end{gather*}
+
+En general, si la sumatoria tiene límites $m$ y $n$ constantes, tenemos:
+
+\begin{equation}
+\sum_{i=m}^n{c} = ((n-m) +1) \times c
+\end{equation}
+
+
+\newcommand{\separar}{\sum_{i=1}^n{a_i+b_i}=\sum_{i=1}^n{ a_i} + \sum_{i=1}^n{b_i} }
+\subsection{Separar sumatorias ($\separar$)}
+
+
+Supongamos que tenemos una sumatoria como:
+
+\begin{equation*}
+\sum_{i=1}^3{i+2^i} = (1+2^1) + (2+2^2) + (3+2^3)
+\end{equation*}
+
+Cada término es $a_i=i+2^i$; sería más fácil si pudiésemos tener dos sumatorias, para tratar el $i$ y el $2^i$ por separado. Dado que del lado derecho de la ecuación sólo estamos sumando, podemos reordenar los términos:
+
+\begin{equation*} (1+2^1) + (2+2^2) + (3+2^3) = (1+2+3) + (2^1+2^2+2^3) =  \sum_{i=1}^3{i} + \sum_{i=1}^3{2^i}
+\end{equation*}
+
+Y entonces:
+
+\begin{equation*}
+\sum_{i=1}^3{i+2^i} = \sum_{i=1}^3{i} + \sum_{i=1}^3{2^i}
+\end{equation*}
+
+Es posible aplicar esta técnica siempre que nuestro término $a_i$ sea la suma de dos (o varias) cosas. La recordamos como:
+
+\begin{equation*}
+\separar
+\end{equation*}
+
+\newcommand{\cortado}{\sum_{i=1}^n{a_i} = \sum_{i=1}^k{a_i} + \sum_{i=k+1}^n{a_i}}
+\newcommand{\completadoArriba}{\sum_{i=1}^k{a_i} = \sum_{i=1}^n{a_i} - \sum_{i=k+1}^n{a_i}}
+\newcommand{\completadoAbajo}{\sum_{i=k}^n{a_i} = \sum_{i=1}^n{a_i} - \sum_{i=1}^{k-1}{a_i}}
+
+\subsection{Cortar sumatorias ($\completadoArriba$, $\completadoAbajo$ )}
+
+Es fácil ver que:
+
+\begin{equation*}
+1+2+3+4 = (1+2) + (3+4)
+\end{equation*}
+
+Siguiendo esa idea, y recordando que con una sumatoria sólo estamos sumando, vemos que:
+
+\begin{equation*}
+\sum_{i=1}^4{i} = 1+2+3+4 = (1+2) + (3+4) = (\sum_{i=1}^2{i}) + (\sum_{i=3}^4{i}) 
+\end{equation*} 
+
+Generalizando, tenemos:
+\begin{equation*}
+\cortado
+\end{equation*}
+
+Por otro lado, como $0=(3+4) -(3+4)$
+\begin{equation*}
+1+2 = (1+2) + (3+4) -(3+4) = (1+2+3+4) - (3+4)
+\end{equation*}
+
+Entonces
+\begin{equation*}
+\sum_{i=1}^2{i} = 1+2 = (1+2+3+4) - (3+4) = (\sum_{i=1}^4{i}) - (\sum_{i=3}^4{i})
+\end{equation*}
+
+Generalizando:
+\begin{equation*}
+\completadoArriba
+\end{equation*}
+
+
+Por último,
+\begin{equation*}
+3+4 = (3+4) + (1+2) - (1+2) = (1+2+3+4) - (1+2)
+\end{equation*}
+
+Entonces
+\begin{equation*}
+\sum_{i=3}^4{i} = 3+4 = (1+2+3+4) - (1+2) = (\sum_{i=1}^4{i}) - (\sum_{i=1}^2{i})
+\end{equation*}
+
+Generalizando:
+\begin{equation*}
+\completadoAbajo
+\end{equation*}
+
+
+% \begin{equation*}
+% \sum_{i=1}^n{a_i \times b_i} \not= \sum_{i=1}^n{ a_i} \times \sum_{i=1}^n{b_i}\\
+% \end{equation*}

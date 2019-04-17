@@ -1,0 +1,61 @@
+\section{Sumatorias genéricas}
+
+\subsubsection{Términos genéricos}
+Muchas veces queremos hablar de sumatorias de una forma genérica o general, especialmente para probar propiedades de las mismas. En este caso, lo más común es que no nos importe cuál es el término en particular de la sumatoria: podría ser $i$, $i^2$, $i*2+1$, $4$, $2^i$ o lo que sea; no nos interesa. Entonces, es válido escribir la sumatoria como:
+
+\begin{equation*}
+	\sum_{i=1}^4{a_i} = a_1+a_2+a_3+a_4 = ?
+\end{equation*}
+
+Como antes, el valor inicial es $1$, el final $4$, pero el valor del término no está especificado, por eso lo llamamos $a_i$; la $a$ nos dice que el término podría ser cualquier cosa, el subíndice $i$ nos dice que el término depende de $i$. Obviamente, hablar del resultado definitivo de esta sumatoria no tiene mucho sentido ya que no sabemos cuáles son sus términos.
+
+Por supuesto, la $a$ en $a_i$ no tiene nada de especial; podríamos haber escrito la sumatoria anterior como:
+
+\begin{equation*}
+	\sum_{i=1}^4{b_i} = b_1+b_2+b_3+b_4
+\end{equation*}
+
+O:
+
+\begin{equation*}
+	\sum_{i=1}^4{c_i} = c_1+c_2+c_3+c_4
+\end{equation*}
+
+También podemos escribir:
+
+\begin{equation*}
+	\sum_{i=1}^4{(a_i+b_i)} = (a_1+b_1)+(a_2+b_2)+(a_3+b_3)+(a_4+b_4)
+\end{equation*}
+
+En este caso, cada término de la sumatoria es $a_i+b_i$, o sea, la suma de 2 términos que dependen de $i$. Un ejemplo de una sumatoria que tiene esta forma podría ser:
+
+\begin{equation*}
+	\sum_{i=1}^4{(i+i^2)} = (1+1^2)+(2+2^2)+(3+3^2)+(4+4^2)
+\end{equation*}
+
+donde $a_i=i$ y $b_i=i^2$.
+
+\subsubsection{Límites genéricos o arbitrarios}
+
+Casi todas la sumatorias que encontramos para representar tipos de ejecución no tienen un valor final definido, sino que dependen del tamaño del problema que resuelve el algoritmo, como el tamaño de un arreglo, la altura de un árbol, etc. Si utilizamos la letra $n$ para representar dicho tamaño la sumatoria queda como:
+
+\begin{equation*}
+	\sum_{i=1}^n{a_i} = a_1+a_2+\dots+a_{n-1}+a_n = ?
+\end{equation*}
+
+La sumatoria de los primeros $n$ números naturales se puede escribir como:
+
+\begin{equation*}
+	\sum_{i=1}^n{i} = 1+2+...+ (n-1) + n 
+\end{equation*}
+
+
+\subsubsection{Ejemplos de sumatorias genéricas}
+
+\begin{gather*}
+\sum_{i=1}^n{(i+1)} = 2+3+\dots+n+(n+1) \hspace{4em} \sum_{i=1}^n{2^i} = 2^1+\dots+2^{n-1}+2^n \\
+\sum_{i=1}^n{a_i} = a_1+a_2+\dots+a_{n-1}+a_n \hspace{4em} \sum_{i=1}^{2n}{i} = 1+2+\dots+(2(n-1))+2n \\
+\sum_{i=1}^{2n}{a_i} = a_1+a_2+\dots+a_{2(n-1)}+2 a_n \hspace{4em} \sum_{i=1}^{log_2 n}{i} = 1+2+\dots+log_2 n
+\end{gather*}
+
+

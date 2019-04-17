@@ -1,0 +1,45 @@
+\section{Notación}
+
+\begin{equation}
+	\sum_{i=valorInicial}^{valorFinal}{a_i}
+\end{equation}
+
+Esto nos dice que tenemos que sumar el valor del término, $a_i$, para los valores de $i$, desde $valorInicial$ hasta $valorFinal$. El valor del término, $a_i$ no es un número fijo, sino que es un valor que depende de la variable de índice $i$. Por ejemplo, la sumatoria de los primeros cuatro números naturales se escribe
+
+\begin{equation}
+  \sum_{i=1}^4{i}=1+2+3+4=10\\
+\end{equation}
+
+y tiene como valor inicial a $1$, como valor final a $4$, como variable de índice a $i$ (abajo del símbolo $\sum$, donde dice $i=1$), $a_i=i$ (a la derecha del símbolo $\sum$), y el resultado es 10. Si cambiamos los valores iniciales y finales, generalmente llamados los \textit{límites} de la sumatoria, tenemos:
+
+\begin{equation}
+  \sum_{i=3}^5{i}=3+4+5=12\\
+\end{equation}
+
+Con valor inicial $3$, valor final $5$, variable de índice $i$, $a_i=i$, y 12 de resultado. Cambiando el valor del término por $i^2$, y volviendo a los valores iniciales y finales del primer ejemplo,  tenemos:
+
+\begin{equation}
+  \sum_{i=1}^4{i^2}=1^2+2^2+3^2+4^2=1+4+9+16=30\\
+\end{equation}
+
+Con $a_i=i^2$, y 30 de resultado. Si cambiamos nuevamente el valor del término:
+
+\begin{equation}
+  \sum_{i=1}^4{(i*2+1)}=(1*2+1)+(2*2+1)+(3*2+1)+(4*2+1)=3+5+7+9=24\\
+\end{equation}
+
+La sumatoria tiene como valor inicial a $1$, como valor final a $4$, variable de índice a $i$, $a_i=i*2+1$, y su resultado es 24. Finalmente,
+
+\begin{equation}
+  \sum_{i=1}^4{2}=2+2+2+2=8\\
+\end{equation}
+
+Tenemos la misma variable de índice y los mismos valores iniciales y finales que antes, pero el valor del término es constante ($a_i=2$), por ende simplemente se suma 4 veces. 
+
+\subsection{Ejemplos}
+
+\begin{gather*}
+\sum_{i=1}^4{(i+1)}=2+3+4+5 \hspace{4em} \sum_{i=2}^5{(i-1)}=1+2+3+4 \\
+\sum_{i=1}^{1350}{i}=1+\dots+1350  \hspace{4em} \sum_{i=1}^4{2^i}=2^1+2^2+2^3+2^4=2+4+8+16 \\
+\sum_{i=2}^5{2}=2+2+2+2=8 \hspace{4em}  \sum_{i=1}^4{c}=c+c+c+c \text{ (c es una constante)}
+\end{gather*}

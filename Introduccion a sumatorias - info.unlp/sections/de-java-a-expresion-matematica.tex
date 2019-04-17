@@ -1,0 +1,16 @@
+\section{De código Java a expresión matemática}
+
+Tenemos una parte del código en Java y queremos expresar con fórmula matemática la cantidad de veces que se ejecuta dicho algoritmo.\\
+
+\begin{verbatim}
+for(int i=2; i<n; i++){
+  for(int j=i; j<=n; j++){
+    algo_de_orden(1)
+  }
+ }
+\end{verbatim}
+
+Tenemos que realizar la suma de todas las iteraciones del ciclo.\\El tiempo de ejecución de un algoritmo debe medirse en función del tamaño de los datos de entrada que debe procesar. En nuestro caso, la cantidad de veces que se realiza depende de $n$
+Si lo expresamos con una sumatoria, quedaría de la siguiente forma:\\
+					      \[ \sum_{i=2}^{n-1}{\sum_{j=i}^{n}{cte}} \]
+
